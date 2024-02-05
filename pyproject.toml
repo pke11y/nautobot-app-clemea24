@@ -30,7 +30,7 @@ python = ">=3.8,<3.12"
 # Used for local development
 nautobot = "^2.1.2"
 nautobot-ssot = { version = "^2.2.0", extras = ["ipfabric"] }
-nautobot-design-builder = "^0.4.4"
+nautobot-design-builder = { git = "https://github.com/nautobot/nautobot-app-design-builder.git", branch = "v2_examples" }
 
 [tool.poetry.group.dev.dependencies]
 bandit = "*"
