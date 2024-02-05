@@ -1,0 +1,23 @@
+{
+    "cookiecutter": {
+        "codeowner_github_usernames": "pke11y",
+        "full_name": "Network to Code, LLC",
+        "email": "info@networktocode.com",
+        "github_org": "pke11y",
+        "app_name": "clemea24",
+        "verbose_name": "Clemea24",
+        "app_slug": "clemea24",
+        "project_slug": "nautobot-app-clemea24",
+        "repo_url": "https://github.com/pke11y/nautobot-app-clemea24",
+        "base_url": "clemea24",
+        "min_nautobot_version": "2.1.2",
+        "max_nautobot_version": "2.9999",
+        "camel_name": "Clemea24",
+        "project_short_description": "Cisco Live EMEA 2024 Nautobot Demo",
+        "model_class_name": "None",
+        "open_source_license": "Apache-2.0",
+        "docs_base_url": "https://docs.nautobot.com",
+        "docs_app_url": "https://docs.nautobot.com/projects/clemea24/en/latest",
+        "_template": "https://github.com/nautobot/cookiecutter-nautobot-app"
+    }
+}
