@@ -16,8 +16,6 @@ x-nautobot-base: &nautobot-base
 version: "3.8"
 services:
   nautobot:
-    volumes:
-      - /Users/pk/ntc/nautobot-app-clemea24/certs/client.pem:/opt/nautobot/client.pem  
     depends_on:
       redis:
         condition: "service_started"
@@ -31,8 +29,6 @@ services:
       - "sh"
       - "-c"  # this is to evaluate the $NAUTOBOT_LOG_LEVEL from the env
       - "nautobot-server celery worker -l $$NAUTOBOT_LOG_LEVEL --events"  ## $$ because of docker-compose
-    volumes:
-      - /Users/pk/ntc/nautobot-app-clemea24/certs/client.pem:/opt/nautobot/client.pem
     depends_on:
       nautobot:
         condition: "service_healthy"
