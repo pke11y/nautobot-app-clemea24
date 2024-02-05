@@ -1,7 +1,9 @@
 ---
-sites:
+locations:
   - name: "{{ site_name }}"
     status__name: "Staging"
+    location_type__name: "Site"
+    parent__name: "{{ region.name }}"
     prefixes:
       - prefix: "{{ site_prefix }}"
         status__name: "Reserved"
@@ -10,7 +12,7 @@ sites:
       - name: "{{ site_name }}-LR{{ i }}"
         status__name: "Planned"
         device_type__model: "C8300-1N1S-6T"
-        device_role__name: "Edge Router"
+        role__name: "Edge Router"
         interfaces:
           - name: "GigabitEthernet0/0"
             type: "1000base-t"
@@ -22,10 +24,10 @@ circuits:
   - cid: "{{ site_name }}-CKT-{{ i }}"
     status__name: "Planned"
     provider__name: "NTC"
-    type__name: "Ethernet"
-    terminations:
+    circuit_type__name: "Ethernet"
+    circuit_terminations:
       - term_side: "A"
-        site__name: "{{ site_name }}"
+        location__name: "{{ site_name }}"
       - term_side: "Z"
         provider_network__name: "NTC-WAN"
   {% endfor %}
